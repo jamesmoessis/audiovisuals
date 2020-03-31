@@ -14,10 +14,10 @@ public class Audio : MonoBehaviour {
     private float[] _bandBuffer;
     private float[] _bufferDecrease;
     private float[] _freqBandHighest;
-
+    
     // From one to zero, the audio level in each band.
-    public static float[] _audioBand;
-    public static float[] _audioBandBuffer;
+    public static float[] _audioBand = new float[0];
+    public static float[] _audioBandBuffer = new float[0];
 
 
     // Start is called before the first frame update
