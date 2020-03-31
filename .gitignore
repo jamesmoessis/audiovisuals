@@ -71,3 +71,12 @@ crashlytics-build.properties
 
 *.wav
 *.mp3
+
+
+Assets/EffectExamples/
+Assets/ExampleAssets/
+Assets/PE2D/
+Assets/Particle Ribbon by Moonflower Carnivore.meta
+Assets/Particle Ribbon by Moonflower Carnivore/
+Assets/particles - bubbles.meta
+Assets/particles - bubbles/
