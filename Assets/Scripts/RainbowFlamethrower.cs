@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class FlameTune : MonoBehaviour {
+public class RainbowFlamethrower : MonoBehaviour {
     private ParticleSystem flameStream;
     public int audioBand;
 
@@ -14,7 +14,7 @@ public class FlameTune : MonoBehaviour {
     }
 
     void Update() {
-        flameStream.startSpeed = Audio._audioBand[audioBand]*8;
-        flameStream.startSize = Audio._audioBand[audioBand] * 12;
+        flameStream.startSpeed = Audio._audioBand[audioBand]*13;
+        flameStream.startSize = Audio._audioBand[audioBand]*9;
     }
 }

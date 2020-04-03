@@ -71,7 +71,8 @@ crashlytics-build.properties
 
 *.wav
 *.mp3
-
+*.mp3.meta
+*.wav.meta
 
 Assets/EffectExamples/
 Assets/ExampleAssets/
@@ -80,3 +81,5 @@ Assets/Particle Ribbon by Moonflower Carnivore.meta
 Assets/Particle Ribbon by Moonflower Carnivore/
 Assets/particles - bubbles.meta
 Assets/particles - bubbles/
+Assets/PBRMaterials/
+Assets/PBRMaterials.meta

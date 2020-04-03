@@ -10,7 +10,7 @@ public class Audio : MonoBehaviour {
     private readonly int _outputLength = (int) Mathf.Ceil(Mathf.Log(NUM_SAMPLES + 1, 2));
 
     private float[] _samples = new float[NUM_SAMPLES];
-    private float[] _freqBand;
+    private  float[] _freqBand;
     private float[] _bandBuffer;
     private float[] _bufferDecrease;
     private float[] _freqBandHighest;
