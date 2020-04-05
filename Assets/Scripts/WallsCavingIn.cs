@@ -25,6 +25,11 @@ public class WallsCavingIn : MonoBehaviour {
         CaveIn();
     }
     
+    /*
+     * Walls "breathe" due to a slow sine wave, even with no input.
+     * Walls move more quickly inwards when a large bass input is detected.
+     * However this movement is limited by maximumChange variable.
+     */
     void CaveIn() {
         //transform.position = (5*normal*Audio._amplitudeBuffer) + initialPosition;
         float maximumChange = 0.04f;
@@ -39,9 +44,6 @@ public class WallsCavingIn : MonoBehaviour {
         } else {
             smoothValue = currentAmp;
         }
-
-        Debug.Log("actual amp: "+Audio._amplitude.ToString());
-        Debug.Log("smooth    : " + smoothValue.ToString());
         transform.position = 1.5f*normal* (float)( smoothValue  + 0.4*Mathf.Sin(0.8f*Time.time)) + initialPosition;
         this.lastAudioValue = smoothValue;
     }
