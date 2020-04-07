@@ -9,15 +9,21 @@ public class Audio : MonoBehaviour {
     public const int NUM_SAMPLES = 512;
     private readonly int _outputLength = (int) Mathf.Ceil(Mathf.Log(NUM_SAMPLES + 1, 2));
 
-    private float[] _samples = new float[NUM_SAMPLES];
+    public float[] _samples = new float[NUM_SAMPLES];
     private  float[] _freqBand;
     private float[] _bandBuffer;
     private float[] _bufferDecrease;
     private float[] _freqBandHighest;
-    
-    // From one to zero, the audio level in each band.
-    public static float[] _audioBand = new float[0];
-    public static float[] _audioBandBuffer = new float[0];
+    public static float[] _audioBand, _audioBandBuffer;
+
+    // 64 band arrays
+    private float[] _freqBand64 = new float[64];
+    private float[] _bandBuffer64 = new float[64];
+    private float[] _bufferDecrease64 = new float[64];
+    private float[] _freqBandHighest64 = new float[64];
+    public float[] _audioBand64, audioBandBuffer64; // DEAL WITH THIS BEING NON STATIC! TOMORROW!
+
+
     public static float _amplitude, _amplitudeBuffer;
     private float maxAmplitude;
     public static float _lowerAmplitude;
@@ -38,8 +44,11 @@ public class Audio : MonoBehaviour {
     void Update() {
         GetSpectrumAudioSource();
         MakeFrequencyBands();
+        MakeFrequencyBands64();
         BandBuffer();
+        BandBuffer64();
         CreateAudioBands();
+        CreateAudioBands64();
         CalcAmplitude();
         CalcLowerAmplitude();
     }
@@ -58,6 +67,19 @@ public class Audio : MonoBehaviour {
                 _audioBandBuffer[i] = (_bandBuffer[i] / _freqBandHighest[i]);
             }
             
+        }
+    }
+
+    void CreateAudioBands64() {
+        for (int i = 0; i < 64 - 1; i++) {
+            if (_freqBand64[i] > _freqBandHighest64[i]) {
+                _freqBandHighest64[i] = _freqBand64[i];
+            }
+            if (_freqBandHighest64[i] != 0) {
+                _audioBand64[i] = (_freqBand64[i] / _freqBandHighest64[i]);
+                _audioBandBuffer64[i] = (_bandBuffer64[i] / _freqBandHighest64[i]);
+            }
+
         }
     }
 
@@ -84,6 +106,21 @@ public class Audio : MonoBehaviour {
         }
     }
 
+
+    void BandBuffer64() {
+        for (int g = 0; g < 64 - 1; g++) {
+            if (_freqBand64[g] > _bandBuffer64[g] || _bandBuffer64[g] < 0) {
+                _bandBuffer64[g] = _freqBand64[g];
+                _bufferDecrease64[g] = 0.005f;
+            }
+            if (_freqBand64[g] < _bandBuffer64[g]) {
+                _bandBuffer64[g] -= _bufferDecrease64[g];
+                _bufferDecrease64[g] *= 1.2f;
+            }
+        }
+    }
+
+
     void MakeFrequencyBands() {
         /*
          * Get the sample data (currently in 512 bands)
@@ -107,6 +144,30 @@ public class Audio : MonoBehaviour {
             length = length * 2;
         }
     }
+
+    void MakeFrequencyBands64() {
+        int count = 0;
+        int samplecount = 1;
+        int power = 0;
+        for (int i = 0; i < 64; i++) {
+            if(i == 16 || i == 32 || i == 40 || i == 48 || i == 56) {
+                power++;
+                samplecount = (int)Mathf.Pow(2, power);
+                if(power == 3) {
+                    samplecount -= 2;
+                }
+            }
+
+            float average = 0;
+            for (int j = 0; j < samplecount; j++) {
+                average += _samples[count] * (count + 1);
+                count++;
+            }
+            average /= count;
+            _freqBand64[i] = average * 80;
+        }
+    }
+
 
     /*
      * Average Amplitude across all bands, calculate and set.

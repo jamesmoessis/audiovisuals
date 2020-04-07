@@ -9,6 +9,7 @@ public class PartyCapController : MonoBehaviour {
 
     private const int NUM_CAPS = 64;
     private GameObject[] apcays = new GameObject[NUM_CAPS];
+    private static float baseYScale = 0.05f;
 
     void Start() {
         GameObject cap;
@@ -27,6 +28,11 @@ public class PartyCapController : MonoBehaviour {
     }
 
     void Update() {
-        
+        for(int i = 0; i < NUM_CAPS; i++) {
+            apcays[i].transform.localScale = new Vector3(
+                apcays[i].transform.localScale.x, 
+                baseYScale + 0.1f*AudioPeer.FindObjectOfType<Audio>()._samples[i],
+                apcays[i].transform.localScale.z);
+        }
     }
 }
