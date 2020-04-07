@@ -28,7 +28,7 @@ public class WallsCavingIn : MonoBehaviour {
     /*
      * Walls "breathe" due to a slow sine wave, even with no input.
      * Walls move more quickly inwards when a large bass input is detected.
-     * However this movement is limited by maximumChange variable.
+     * However this movement is limited, or "smoothed" by maximumChange variable.
      */
     void CaveIn() {
         //transform.position = (5*normal*Audio._amplitudeBuffer) + initialPosition;
