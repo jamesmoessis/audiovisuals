@@ -21,8 +21,8 @@ public class Audio : MonoBehaviour {
     private float[] _bandBuffer64 = new float[64];
     private float[] _bufferDecrease64 = new float[64];
     private float[] _freqBandHighest64 = new float[64];
-    public float[] _audioBand64, audioBandBuffer64; // DEAL WITH THIS BEING NON STATIC! TOMORROW!
-
+    public float[] _audioBand64; 
+    public float[] _audioBandBuffer64;
 
     public static float _amplitude, _amplitudeBuffer;
     private float maxAmplitude;
@@ -38,6 +38,8 @@ public class Audio : MonoBehaviour {
         this._freqBandHighest =     new float[_outputLength];
         _audioBand =                new float[_outputLength];
         _audioBandBuffer =          new float[_outputLength];
+        _audioBand64 = new float[64];
+        _audioBandBuffer64 = new float[64];
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class Audio : MonoBehaviour {
     }
 
     void CreateAudioBands64() {
-        for (int i = 0; i < 64 - 1; i++) {
+        for (int i = 0; i < 64-1; i++) {
             if (_freqBand64[i] > _freqBandHighest64[i]) {
                 _freqBandHighest64[i] = _freqBand64[i];
             }
