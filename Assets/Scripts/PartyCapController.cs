@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class PartyCapController : MonoBehaviour {
     public GameObject capPrefab;
+    public Audio source;
 
-    private const int NUM_CAPS = 64;
+    private const int NUM_CAPS = 32;
     private GameObject[] apcays = new GameObject[NUM_CAPS];
     private static float baseYScale = 0.05f;
     private GameObject leftPlane;
     private GameObject rightPlane;
-
-    public Audio source;
+    private Color colour;
 
     void Start() {
         GameObject cap;
@@ -26,25 +26,28 @@ public class PartyCapController : MonoBehaviour {
             cap.transform.position = this.transform.position;
             cap.transform.parent = this.transform; // may need to get rid of this line
             xVector.x = xValues[i];
-            cap.transform.position += (2f*moveUpOne) + xVector;
+            cap.transform.position += (1.8f*moveUpOne) + xVector;
             cap.name = "PartyCap" + i;
+            cap.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
+            cap.transform.localScale *= 2;
             apcays[i] = cap;
         }
         leftPlane = GameObject.Find("LeftPlane");
         rightPlane = GameObject.Find("RightPlane");
+        colour = new Color(0.5f, 0.5f, 0.5f);
     }
 
     void Update() {
         UpdateCapHeights();
         SqueezeCaps();
+        UpdateColour();
     }
 
     void UpdateCapHeights() {
         for (int i = 0; i < NUM_CAPS; i++) {
-            Debug.Log(i);
             apcays[i].transform.localScale = new Vector3(
                 apcays[i].transform.localScale.x,
-                baseYScale + 0.1f * source._audioBandBuffer64[i],
+                baseYScale + 0.13f * source._audioBandBuffer64[i],
                 apcays[i].transform.localScale.z);
         }
     }
@@ -57,6 +60,21 @@ public class PartyCapController : MonoBehaviour {
             apcays[i].transform.position = new Vector3(xValues[i]+0.15f, 
                 apcays[i].transform.position.y, 
                 apcays[i].transform.position.z);
+        }
+    }
+
+    void UpdateColour() {
+        colour.r = Audio._lowerAmplitude;
+        colour.g = Audio._amplitude;
+        colour.b = Audio._amplitudeBuffer;
+        colour.r = 1.0f;
+        colour.g = 1.0f;
+        colour.b = 1.0f;
+        Material capMat;
+        for(int i = 0; i < NUM_CAPS; i++) {
+            // This shader is driving me cray vray 
+            apcays[i].GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red); // This just makes it white... WHY?
+            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", 100f); // This just makes it white... WHY?
         }
     }
 }
