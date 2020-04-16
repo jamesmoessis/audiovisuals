@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FlameParticleControl : MonoBehaviour {
     private float _radius;
-    private UnityEngine.Experimental.VFX.VisualEffect _visualEffect;
+    private UnityEngine.VFX.VisualEffect _visualEffect;
     public int band;
     public float levelModifier = 1;
 
     void Start() {
         _radius = 1;
-        _visualEffect = this.GetComponent<UnityEngine.Experimental.VFX.VisualEffect>();
+        _visualEffect = this.GetComponent<UnityEngine.VFX.VisualEffect>();
         _visualEffect.SetFloat("audioLevel", _radius);
     }
 

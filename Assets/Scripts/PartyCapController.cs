@@ -40,14 +40,14 @@ public class PartyCapController : MonoBehaviour {
     void Update() {
         UpdateCapHeights();
         SqueezeCaps();
-        UpdateColour();
+        //UpdateColour();
     }
 
     void UpdateCapHeights() {
         for (int i = 0; i < NUM_CAPS; i++) {
             apcays[i].transform.localScale = new Vector3(
                 apcays[i].transform.localScale.x,
-                baseYScale + 0.13f * source._audioBandBuffer64[i],
+                baseYScale + 0.13f * source._audioBandBuffer64[i*2],
                 apcays[i].transform.localScale.z);
         }
     }
@@ -63,6 +63,7 @@ public class PartyCapController : MonoBehaviour {
         }
     }
 
+    // Currently not working: commenting out for now
     void UpdateColour() {
         colour.r = Audio._lowerAmplitude;
         colour.g = Audio._amplitude;
@@ -73,8 +74,9 @@ public class PartyCapController : MonoBehaviour {
         Material capMat;
         for(int i = 0; i < NUM_CAPS; i++) {
             // This shader is driving me cray vray 
-            apcays[i].GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red); // This just makes it white... WHY?
-            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", 100f); // This just makes it white... WHY?
+            //apcays[i].GetComponent<MeshRenderer>().material.SetColor("_EmissiveColor", Color.red); // This just makes it white... WHY?
+            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", Audio._amplitude); // This just makes it white... WHY?
+            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", 0f); // This just makes it white... WHY?
         }
     }
 }

@@ -1482,7 +1482,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   intensity:
     overrideState: 1
     value: 1.25
@@ -1541,7 +1541,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.258
   smoothness:
     overrideState: 1
     value: 0.25
