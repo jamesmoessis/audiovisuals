@@ -153,10 +153,11 @@ MonoBehaviour:
   m_RenderPipelineRayTracingResources: {fileID: 0}
   m_DefaultVolumeProfile: {fileID: 11400000, guid: f940a8037e6cda542891dc1aac1fa4e8,
     type: 2}
-  m_DefaultLookDevProfile: {fileID: 0}
+  m_DefaultLookDevProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02,
+    type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 1028644667213
+      data1: 52688510517085
       data2: 4539628425463136256
     lodBias: 1
     lodBiasMode: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
     materialQuality: 0
   m_RenderingPathDefaultBakedOrCustomReflectionFrameSettings:
     bitDatas:
-      data1: 1174664183629
+      data1: 69340090171165
       data2: 4539628424389459968
     lodBias: 1
     lodBiasMode: 0
@@ -178,8 +179,8 @@ MonoBehaviour:
     materialQuality: 0
   m_RenderingPathDefaultRealtimeReflectionFrameSettings:
     bitDatas:
-      data1: 1526851501901
-      data2: 4539628424657895424
+      data1: 1526694157341
+      data2: 4539628424389459968
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -189,7 +190,7 @@ MonoBehaviour:
     materialQuality: 0
   m_RenderPipelineSettings:
     supportShadowMask: 1
-    supportSSR: 0
+    supportSSR: 1
     supportSSAO: 1
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
@@ -211,24 +212,24 @@ MonoBehaviour:
     colorBufferFormat: 74
     supportCustomPass: 1
     customBufferFormat: 12
-    supportedLitShaderMode: 3
-    supportDecals: 1
-    msaaSampleCount: 1
+    supportedLitShaderMode: 2
+    supportDecals: 0
+    msaaSampleCount: 4
     supportMotionVectors: 1
     supportRuntimeDebugDisplay: 1
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportRayTracing: 0
     lightLoopSettings:
-      cookieAtlasSize: 512
+      cookieAtlasSize: 2048
       cookieFormat: 74
       pointCookieSize: 128
       cubeCookieTexArraySize: 16
       cookieAtlasLastValidMip: 0
       cookieTexArraySize: 16
-      planarReflectionAtlasSize: 4096
-      reflectionProbeCacheSize: 64
-      reflectionCubemapSize: 256
+      planarReflectionAtlasSize: 1024
+      reflectionProbeCacheSize: 4
+      reflectionCubemapSize: 128
       reflectionCacheCompressed: 0
       planarReflectionCacheCompressed: 0
       skyReflectionSize: 256
@@ -282,10 +283,10 @@ MonoBehaviour:
       lutFormat: 48
       bufferFormat: 74
     dynamicResolutionSettings:
-      enabled: 0
+      enabled: 1
       maxPercentage: 100
-      minPercentage: 100
-      dynResType: 1
+      minPercentage: 10
+      dynResType: 0
       upsampleFilter: 1
       forceResolution: 0
       forcedPercentage: 100
@@ -315,7 +316,7 @@ MonoBehaviour:
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:
-        m_Values: 
+        m_Values: 000000
         m_SchemaId:
           m_Id: 
     maximumLODLevel:
@@ -342,11 +343,17 @@ MonoBehaviour:
   shaderVariantLogLevel: 0
   availableMaterialQualityLevels: -1
   m_DefaultMaterialQualityLevel: 4
-  diffusionProfileSettings: {fileID: 11400000, guid: 26bdddf49760c61438938733f07fa2a2,
+  diffusionProfileSettings: {fileID: 11400000, guid: cbe1ee9036c47b84ba1b8b3dbcde2aff,
     type: 2}
   diffusionProfileSettingsList:
-  - {fileID: 11400000, guid: 6b4a3056afaf507469a130968475d2a5, type: 2}
-  - {fileID: 11400000, guid: 7683ea54f27c06a4fa709644d51c9943, type: 2}
+  - {fileID: 11400000, guid: cbe1ee9036c47b84ba1b8b3dbcde2aff, type: 2}
+  - {fileID: 11400000, guid: 2a1b7187ff484ca49959d4b2a53cbe8f, type: 2}
+  - {fileID: 11400000, guid: 578e14a174424a64f901ea91cbdf10e3, type: 2}
+  - {fileID: 11400000, guid: d70a4a3f7cca7914299c768fe225c1a6, type: 2}
+  - {fileID: 11400000, guid: b2f2cc70bbeea044cad03e818e8f40d6, type: 2}
+  - {fileID: 11400000, guid: b7c9e1a269c9dbb4eb90dbae3771e378, type: 2}
+  - {fileID: 11400000, guid: 0a415a0000ab2e3499b6fabc32bbbee1, type: 2}
+  - {fileID: 11400000, guid: 28d5e971f10610d41acb672740e01268, type: 2}
   beforeTransparentCustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []
   afterPostProcessCustomPostProcesses: []
