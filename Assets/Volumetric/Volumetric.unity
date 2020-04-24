@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.07446767, g: 0.060551792, b: 0.072235934, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 806470611}
   - component: {fileID: 806470613}
   - component: {fileID: 806470612}
+  - component: {fileID: 806470614}
   m_Layer: 0
   m_Name: VFX-Volumetric
   m_TagString: Untagged
@@ -760,6 +761,744 @@ MonoBehaviour:
   m_Bindings:
   - {fileID: 806470612}
   m_VisualEffect: {fileID: 806470609}
+--- !u!114 &806470614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806470608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfb91891b80c194e9ecae1f2008a0be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 878556484}
+--- !u!114 &850677823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81bcacc415a1f743bfdf703afc52027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxColor:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  top:
+    m_OverrideState: 0
+    m_Value: {r: 0.1792453, g: 0.09294793, b: 0, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  middle:
+    m_OverrideState: 0
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  bottom:
+    m_OverrideState: 0
+    m_Value: {r: 0.034264863, g: 0.08075503, b: 0.20754719, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  gradientDiffusion:
+    m_OverrideState: 0
+    m_Value: 3
+--- !u!1 &878556483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 878556486}
+  - component: {fileID: 878556485}
+  - component: {fileID: 878556484}
+  m_Layer: 0
+  m_Name: AudioPeer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &878556484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878556483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07aab210bfec72c4cb28d3f978425e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _samples:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  _audioBand64: []
+  _audioBandBuffer64: []
+--- !u!82 &878556485
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878556483}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 50756582dc980d542a5409c0985d97d5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &878556486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878556483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.174092, y: -3.2673593, z: 13.821491}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948803359
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +1531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 98fc33b23ead27d489c98cebedcae68c, type: 2}
   m_StaticLightingSkyUniqueID: 3
-  m_SkySettings: {fileID: 1260074471}
+  m_SkySettings: {fileID: 850677823}
   m_SkySettingsFromProfile: {fileID: 114517847276359042, guid: 98fc33b23ead27d489c98cebedcae68c,
     type: 2}
 --- !u!114 &948803361
@@ -1030,76 +1769,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -36.999, y: 120.272, z: -88.424}
---- !u!114 &1260074471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a81bcacc415a1f743bfdf703afc52027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxColor:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: 0, z: 0}
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  top:
-    m_OverrideState: 0
-    m_Value: {r: 0, g: 0, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
-  middle:
-    m_OverrideState: 0
-    m_Value: {r: 0.3, g: 0.7, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
-  bottom:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
-  gradientDiffusion:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!1 &1274503929
 GameObject:
   m_ObjectHideFlags: 0
