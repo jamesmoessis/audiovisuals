@@ -14,7 +14,7 @@ public class Audio : MonoBehaviour {
     private float[] _bandBuffer;
     private float[] _bufferDecrease;
     private float[] _freqBandHighest;
-    public static float[] _audioBand, _audioBandBuffer;
+    public float[] _audioBand, _audioBandBuffer;
 
     // 64 band arrays
     private float[] _freqBand64 = new float[64];
@@ -24,9 +24,9 @@ public class Audio : MonoBehaviour {
     public float[] _audioBand64; 
     public float[] _audioBandBuffer64;
 
-    public static float _amplitude, _amplitudeBuffer;
+    public float _amplitude, _amplitudeBuffer;
     private float maxAmplitude;
-    public static float _lowerAmplitude;
+    public float _lowerAmplitude;
 
 
     // Start is called before the first frame update

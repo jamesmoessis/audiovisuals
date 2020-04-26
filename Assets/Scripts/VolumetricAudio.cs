@@ -17,7 +17,7 @@ public class VolumetricAudio : MonoBehaviour {
     }
 
     void Update() {
-        float audioValue = Audio._lowerAmplitude;
+        float audioValue = source._lowerAmplitude;
         visualEffect.SetFloat("AudioLevel", audioValue*multiplier);
     }
 }

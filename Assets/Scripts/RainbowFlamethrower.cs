@@ -8,6 +8,7 @@ public class RainbowFlamethrower : MonoBehaviour {
     private ParticleSystem embers;
     public int audioBand;
     public GameObject emberobj;
+    public Audio source;
 
 
     void Start() {
@@ -23,8 +24,8 @@ public class RainbowFlamethrower : MonoBehaviour {
     }
 
     void Update() {
-        flameStream.startSpeed = Audio._audioBand[audioBand]*13;
-        flameStream.startSize = Audio._audioBand[audioBand]*9;
+        flameStream.startSpeed = source._audioBand[audioBand]*13;
+        flameStream.startSize = source._audioBand[audioBand]*9;
         //embers.emission.S. = 50 + Audio._audioBand[audioBand] * 250;
         
     }

@@ -13,11 +13,12 @@ public class WallsCavingIn : MonoBehaviour {
     private Vector3 normal;
     private Vector3 initialPosition;
     private float lastAudioValue;
+    public Audio source;
 
     void Start() {
         normal = transform.up;
         initialPosition = transform.position;
-        lastAudioValue = Audio._amplitude;
+        lastAudioValue = source._amplitude;
         Debug.Log(normal);
     }
 
@@ -34,7 +35,7 @@ public class WallsCavingIn : MonoBehaviour {
         //transform.position = (5*normal*Audio._amplitudeBuffer) + initialPosition;
         float maximumChange = 0.04f;
         float smoothValue;
-        float currentAmp = Audio._lowerAmplitude;
+        float currentAmp = source._lowerAmplitude;
         if (Mathf.Abs(currentAmp - lastAudioValue) > maximumChange) {
             if (currentAmp < lastAudioValue) {
                 smoothValue = lastAudioValue - maximumChange;

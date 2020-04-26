@@ -7,6 +7,7 @@ public class FlameParticleControl : MonoBehaviour {
     private UnityEngine.VFX.VisualEffect _visualEffect;
     public int band;
     public float levelModifier = 1;
+    public Audio source;
 
     void Start() {
         _radius = 1;
@@ -15,7 +16,7 @@ public class FlameParticleControl : MonoBehaviour {
     }
 
     void Update() {
-        _radius = Audio._audioBandBuffer[this.band];
+        _radius = source._audioBandBuffer[this.band];
         _visualEffect.SetFloat("audioLevel", this.levelModifier*_radius);
     }
 }

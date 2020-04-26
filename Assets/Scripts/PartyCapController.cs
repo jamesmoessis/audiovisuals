@@ -65,9 +65,9 @@ public class PartyCapController : MonoBehaviour {
 
     // Currently not working: commenting out for now
     void UpdateColour() {
-        colour.r = Audio._lowerAmplitude;
-        colour.g = Audio._amplitude;
-        colour.b = Audio._amplitudeBuffer;
+        colour.r = source._lowerAmplitude;
+        colour.g = source._amplitude;
+        colour.b = source._amplitudeBuffer;
         colour.r = 1.0f;
         colour.g = 1.0f;
         colour.b = 1.0f;
@@ -75,7 +75,7 @@ public class PartyCapController : MonoBehaviour {
         for(int i = 0; i < NUM_CAPS; i++) {
             // This shader is driving me cray vray 
             //apcays[i].GetComponent<MeshRenderer>().material.SetColor("_EmissiveColor", Color.red); // This just makes it white... WHY?
-            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", Audio._amplitude); // This just makes it white... WHY?
+            apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", source._amplitude); // This just makes it white... WHY?
             apcays[i].GetComponent<MeshRenderer>().material.SetFloat("_EmissionIntensity", 0f); // This just makes it white... WHY?
         }
     }
