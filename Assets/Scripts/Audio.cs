@@ -25,8 +25,8 @@ public class Audio : MonoBehaviour {
     public float[] _audioBandBuffer64;
 
     public float _amplitude, _amplitudeBuffer;
+    public float _lowerAmplitude, _higherAmplitude;
     private float maxAmplitude;
-    public float _lowerAmplitude;
 
 
     // Start is called before the first frame update
@@ -52,7 +52,7 @@ public class Audio : MonoBehaviour {
         CreateAudioBands();
         CreateAudioBands64();
         CalcAmplitude();
-        CalcLowerAmplitude();
+        CalcGenericAmplitudes();
     }
 
     void GetSpectrumAudioSource() {
@@ -185,11 +185,19 @@ public class Audio : MonoBehaviour {
         _amplitudeBuffer = amplitudeSumBuffer / _audioBandBuffer.Length;
     }
 
-    void CalcLowerAmplitude() {
+    void CalcGenericAmplitudes() {
+        // Low frequency amplitude: 
         float amplitudeSum = 0;
         for (int i = 0; i < 4; i++) {
             amplitudeSum += _audioBandBuffer[i];
         }
         _lowerAmplitude = amplitudeSum / 4;
+
+        // High frequency amplitude:
+        amplitudeSum = 0;
+        for (int i = 50; i < 64; i++) {
+            amplitudeSum += _audioBandBuffer64[i];
+        }
+        _higherAmplitude = amplitudeSum / (60 - 54);
     }
 }
