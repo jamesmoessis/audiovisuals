@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06606436, g: 0.0040246444, b: 0.046763103, a: 1}
+  m_IndirectSpecularColor: {r: 0.06623322, g: 0.004024768, b: 0.04669651, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &544721170
+--- !u!114 &264629993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 0e28bb77d0643bd42bdd46fa8e26a5d3, type: 2}
   m_StaticLightingSkyUniqueID: 3
-  m_SkySettings: {fileID: 544721170}
+  m_SkySettings: {fileID: 264629993}
   m_SkySettingsFromProfile: {fileID: 114257510638711138, guid: 0e28bb77d0643bd42bdd46fa8e26a5d3,
     type: 2}
 --- !u!114 &1337786429
@@ -940,7 +940,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9a563f93c7479d647b393492008772d5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93fe19ac59e1a2f44b3d5d7b43c2b774, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
