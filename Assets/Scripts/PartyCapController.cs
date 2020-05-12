@@ -47,7 +47,7 @@ public class PartyCapController : MonoBehaviour {
         for (int i = 0; i < NUM_CAPS; i++) {
             apcays[i].transform.localScale = new Vector3(
                 apcays[i].transform.localScale.x,
-                baseYScale + 0.13f * source._audioBandBuffer64[i*2],
+                baseYScale + 0.13f * source._audioBand64[i*2],
                 apcays[i].transform.localScale.z);
         }
     }
