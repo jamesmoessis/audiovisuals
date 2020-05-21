@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,6 +29,11 @@ public class Audio : MonoBehaviour {
     public float _lowerAmplitude, _higherAmplitude;
     private float maxAmplitude;
 
+    // Microphone/Line Input
+    public AudioClip audioClip;
+    public bool useMicrophone;
+    public string selectedDevice;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -40,6 +46,20 @@ public class Audio : MonoBehaviour {
         _audioBandBuffer =          new float[_outputLength];
         _audioBand64 = new float[64];
         _audioBandBuffer64 = new float[64];
+
+        if (useMicrophone) {
+            if (Microphone.devices.Length > 0) {
+                for(int i = 0; i< Microphone.devices.Length; i++) {
+                    Debug.Log(Microphone.devices[i]);
+                }
+                _audioSource.clip = Microphone.Start(null, true, 1000, 44100); // todo this only works with null. troubleshoot and make consistent.
+            } else {
+                useMicrophone = false;
+            }
+        } if (!useMicrophone) {
+            _audioSource.clip = audioClip;
+        }
+        _audioSource.Play();
     }
 
     // Update is called once per frame
@@ -56,7 +76,7 @@ public class Audio : MonoBehaviour {
     }
 
     void GetSpectrumAudioSource() {
-        _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);
+        _audioSource.GetSpectrumData(_samples, 1, FFTWindow.Blackman);
     }
 
     void CreateAudioBands() {
