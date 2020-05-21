@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Win32;
+﻿using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -56,12 +52,15 @@ public class DropDetection : MonoBehaviour {
         if (last3avg > bassRatings.Average()*5 && Time.time - lastDropTime > 20) { 
             drop = true;
             lastDropTime = Time.time;
-            Debug.Log("DROP THE BASS!!!!!!!!!");
+            OnDrop();
         }
 
         fc = (fc + 1) % l;
     }
 
+    void OnDrop() {
+        Debug.Log("DROP THE BASS!!!!!!!!!");
+    }
 
     static int mod(int x, int m) {
         // return a modulo b. Needed because % gives remainder in c#, not modulo.

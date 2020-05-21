@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4494.9614, g: 3277.1309, b: 2962.7288, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -762,6 +762,7 @@ GameObject:
   - component: {fileID: 671936463}
   - component: {fileID: 671936462}
   - component: {fileID: 671936461}
+  - component: {fileID: 671936464}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1312,7 +1313,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 39f1eafd8f69ed94790473fae724f15d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e71cba33a9fd0eb46907a4073586ccca, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1412,6 +1413,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671936464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671936460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5568138ba1f0cf448ba0fd5f7cca6f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: 0
 --- !u!1 &983968856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: fe98941c8840f4d47aecf5107c1adcb6, type: 2}
   m_StaticLightingSkyUniqueID: 4
-  m_SkySettings: {fileID: 1697011097}
+  m_SkySettings: {fileID: 1636626435}
   m_SkySettingsFromProfile: {fileID: 4339962821540820839, guid: fe98941c8840f4d47aecf5107c1adcb6,
     type: 2}
 --- !u!114 &1400590386
@@ -2543,7 +2557,7 @@ MonoBehaviour:
   showAdditionalSettings: 2
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
---- !u!114 &1697011097
+--- !u!114 &1636626435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
