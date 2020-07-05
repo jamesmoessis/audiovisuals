@@ -32,7 +32,7 @@ public class Audio : MonoBehaviour {
     // Microphone/Line Input
     public AudioClip audioClip;
     public bool useMicrophone;
-    public string selectedDevice;
+    //public string selectedDevice;
 
 
     // Start is called before the first frame update
@@ -49,17 +49,24 @@ public class Audio : MonoBehaviour {
 
         if (useMicrophone) {
             if (Microphone.devices.Length > 0) {
-                for(int i = 0; i< Microphone.devices.Length; i++) {
-                    Debug.Log(Microphone.devices[i]);
-                }
-                _audioSource.clip = Microphone.Start(null, true, 1000, 44100); // todo this only works with null. troubleshoot and make consistent.
+                //for(int i = 0; i< Microphone.devices.Length; i++) {
+                //    Debug.Log(Microphone.devices[i]);
+                //}
+
+                // Currently working with the current setup:
+                // headphone jack from mac -> front panel mic in Dansby. 
+                // todo menu for selecting device. 
+                // will also need to split this input, or get it working from a line in. 
+                _audioSource.clip = Microphone.Start("Mic in at front panel (Pink) (Realtek(R) Audio)", true, 1000, 48000); // set to null to use default mic
             } else {
                 useMicrophone = false;
             }
-        } if (!useMicrophone) {
+        } 
+        if (!useMicrophone) {
             _audioSource.clip = audioClip;
         }
         _audioSource.Play();
+        Debug.Log("AUDIO SOURCE IS: " + _audioSource.clip.name);
     }
 
     // Update is called once per frame
@@ -76,7 +83,7 @@ public class Audio : MonoBehaviour {
     }
 
     void GetSpectrumAudioSource() {
-        _audioSource.GetSpectrumData(_samples, 1, FFTWindow.Blackman);
+        _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);
     }
 
     void CreateAudioBands() {

@@ -21,11 +21,11 @@ public class TerrainMusic : MonoBehaviour {
         audioValues.x = source._lowerAmplitude;
         audioValues.y = source._amplitude;
         audioValues.z = source._higherAmplitude;
-        if (audioValues.z > 0.8) {
+        /*if (audioValues.z > 0.8) {
             visualEffect.SetGradient("HeightFieldColorMap", highsGradient);
         } else {
             visualEffect.SetGradient("HeightFieldColorMap", startGradient);
-        }
+        }*/
         visualEffect.SetVector3("AudioLevels", audioValues);
     }
 }
