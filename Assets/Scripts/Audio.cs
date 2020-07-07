@@ -57,7 +57,8 @@ public class Audio : MonoBehaviour {
                 // headphone jack from mac -> front panel mic in Dansby. 
                 // todo menu for selecting device. 
                 // will also need to split this input, or get it working from a line in. 
-                _audioSource.clip = Microphone.Start("Mic in at front panel (Pink) (Realtek(R) Audio)", true, 1000, 48000); // set to null to use default mic
+                //_audioSource.clip = Microphone.Start("Mic in at front panel (Pink) (Realtek(R) Audio)", true, 1000, 48000); // set to null to use default mic
+                _audioSource.clip = Microphone.Start(null, true, 1000, 48000);
             } else {
                 useMicrophone = false;
             }

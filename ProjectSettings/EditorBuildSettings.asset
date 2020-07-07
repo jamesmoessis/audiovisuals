@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/VoxelizedTerrain/VoxelizedTerrain.unity
+    guid: b19554f49217d8d4e88c534de1d04cf3
+  - enabled: 1
+    path: Assets/Volumetric/Volumetric.unity
+    guid: 361436e556dc53a4ca577abe64a63fec
+  - enabled: 1
+    path: Assets/Scenes/ParticleFire.unity
+    guid: 0dc5dcd272c0fcd4281228b438bd8fd8
+  - enabled: 1
+    path: Assets/Scenes/RainbowFlamethrowers.unity
+    guid: 4842e64764f75a641b69f629aa94f8db
+  - enabled: 1
+    path: Assets/Samples/RibbonPack/RibbonPack.unity
+    guid: bdd4ae2aaef5a394ea08b79de2d71aa0
+  - enabled: 1
+    path: Assets/Samples/UnityLogo/UnityLogo.unity
+    guid: 2b64709540d56cd4a9e0714b6197cc60
   m_configObjects: {}
